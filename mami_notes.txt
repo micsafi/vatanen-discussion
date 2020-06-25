@@ -1,0 +1,54 @@
+<div layout=”row” layout-align=”start center” ng-repeat=”x in msg.payload”>
+    <span flex>{{x.messageType}}</span>
+    <span flex>{{x.message}}</span>
+</div>
+
+
+
+<table>
+  <tr ng-repeat="x in msg.payload">
+    <td ng-style="{text-align: (x.messageType == 'Request') ? 'left' : 'right'}">{{ x.messageType }}</td>
+    <td>{{ x.message }}</td>
+  </tr>
+</table>
+
+
+<table>
+  <tr ng-repeat="x in msg.payload">
+    <td ng-style="{color: (x.messageType == 'Request') ? 'red' : 'green'}">{{ x.message }}</td>
+  </tr>
+</table>
+
+
+<div class="h1"><bold>Discussion History</bold></div>
+
+
+  <div layout="row" ng-repeat="x in msg.payload">
+    <p ng-style="{color: (x.messageType == 'Request') ? 'grey' : 'blue'}">{{ x.message }}</p>
+  </div>
+
+
+
+  var conversationHistory = flow.get("conversationHistory");
+
+  if (!conversationHistory) {
+      conversationHistory = [];
+  } else if (conversationHistory.length === 0) {
+
+      conversationHistory = [];
+  }
+
+  conversationHistory.push({messageType: 'Request', message: msg.payload});
+
+  flow.set("conversationHistory", conversationHistory);
+
+  msg.payload = conversationHistory;
+
+  return msg;
+
+  /* msg.payload = [{messageType: 'Request',
+                  message: 'Terve'},
+              {messageType: 'Response',
+                  message: 'Terve'}]; */
+
+  return msg;

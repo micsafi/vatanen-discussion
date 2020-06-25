@@ -1,0 +1,11 @@
+# gitignore for mami-ear
+
+# All generated mp3 files should not be uploaded to repository
+*.mp3
+
+# Node modules
+node_modules
+
+#Npm debug logs
+npm-debug.log
+

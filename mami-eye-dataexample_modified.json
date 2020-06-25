@@ -1,0 +1,65 @@
+{
+  "watsonfaces": [{
+    "age": {
+      "score": 0.502411,
+      "min": 40,
+      "max": 45
+    },
+    "face_location": {
+      "left": 51,
+      "top": 41,
+      "width": 83,
+      "height": 103
+    },
+    "gender": {
+      "score": 0.970688,
+      "gender": "MALE"
+    }
+  }],
+  "firstname": {
+    "value": "Mikko",
+    "namecountinfinland": "21759",
+    "namegender": "M",
+    "confidence": "0.84"
+  },
+  "lastname": {
+    "value": "Mäkelä",
+    "namecountinfinland": "2867",
+    "confidence": "0.52"
+  },
+  "watsonclasses": [{
+      "class": "bottle green
+      color ", "
+      score ": 0.946}, {"
+      class ": "
+      garment ",
+      "score": 0.693
+    }, {
+      "class": "surgical gown",
+      "type_hierarchy": "/garment/surgical
+      gown ", "
+      score ": 0.594}, {"
+      class ":
+      "shirt",
+      "score": 0.548
+    }, {
+      "class": "T-shirt",
+      "score": 0.546
+    },
+    {
+      "class": "polo shirt",
+      "type_hierarchy": "/garment/shirt/polo
+      shirt ", "
+      score ": 0.52},  {
+        "class": "sleeve",
+        "score": 0.5
+      }],
+    "presence": {
+      "confidence": "1.0",
+      "personinfocus": "True",
+      "lastseentimestamp": "2017-09-13
+      20: 20: 49 ",
+      "facewidth": "618",
+      "estimateddistance": "77.67"
+    }
+  }
